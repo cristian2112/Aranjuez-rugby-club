@@ -1,0 +1,24 @@
+<ul style="top: 65px;" id="slide-out" class="side-nav fixed leftside-navigation" style="margin-top: 7px;">
+    <li class="bold"><a ui-sref="dashboard" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Inicio</a></li>
+    <li class="bold"><a  class="waves-effect waves-cyan"><i class="mdi-action-stars"></i> Información del club</a></li>
+    <li class="bold"><a  class="waves-effect waves-cyan"><i class="mdi-communication-contacts"></i> Contactos</a></li>
+    <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+            <li class="bold"><a  class="waves-effect waves-cyan"><i class="mdi-image-collections"></i> Galeria</a></li>
+            <li class="bold"><a class="collapsible-header  waves-effect waves-cyan"><i class="mdi-action-info"></i> Noticias</a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a >Noticia 1</a></li>
+                        <li><a >Noticia 2</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </li>
+</ul>
+<a style="top: -80px" href="#" data-activates="slide-out" class="right sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i class="mdi-navigation-menu"></i></a>
+
+<script>
+    $('.sidebar-collapse').sideNav();
+    $('.collapsible').collapsible();
+</script>

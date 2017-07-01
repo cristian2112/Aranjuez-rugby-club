@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="aranjuez">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="msapplication-tap-highlight" content="no">
+        <title>Aranjuez R.C.</title>
+        <!-- For iPhone -->
+        <meta name="msapplication-TileColor" content="#00bcd4">
+        <!-- For Windows Phone -->
+        <!-- CORE CSS-->
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+        <!-- Custome CSS-->
+        <link href="css/custom-style.css" type="text/css" rel="stylesheet" media="screen,projection">
+        <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+        <link href="css/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
+        <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+        <link href="js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    </head>
+    <body>
+        <header id="header" class="page-topbar" header-template></header>
+        <div id="main">
+            <div class="wrapper">
+                <aside id="left-sidebar-nav" sidebar-template></aside>
+                <section id="content" ui-view></section>
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container">
+                    <span>Copyright © 2017 <a class="grey-text text-lighten-4">Aranjuez R.C</a> All rights reserved.</span>
+                    <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="">Cristian Burgos</a></span>
+                </div>
+            </div>
+        </footer>
+        <!-- jQuery Library -->
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+
+        <!--materialize js-->
+        <script type="text/javascript" src="js/materialize.js"></script>
+
+        <!--prism-->
+        <script type="text/javascript" src="js/prism.js"></script>
+
+        <!--scrollbar-->
+        <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+        <!-- chartist -->
+        <script type="text/javascript" src="js/plugins/chartist-js/chartist.min.js"></script>
+
+        <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+        <script type="text/javascript" src="js/plugins.js"></script>
+
+        <!-- Angular -->
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+        <!-- App -->
+        <script src="app/app.js"></script>
+
+        <!-- Core Directives -->
+        <script type="text/javascript" src="app/core/directives/header/headerTemplate.directive.js"></script>
+        <script type="text/javascript" src="app/core/directives/sidebar/sidebarTemplate.directive.js"></script>
+    </body>
+</html>

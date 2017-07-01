@@ -1,0 +1,22 @@
+{
+  "name": "Pagina de aranjuez",
+  "authors": [
+    "Cristian Burgos <cristian.burgos.utepsa@gmail.com>"
+  ],
+  "description": "pagina estatica del club",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-ui-router": "^0.4.2"
+  }
+}
