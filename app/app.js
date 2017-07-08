@@ -16,6 +16,7 @@
         $stateProvider
             .state('dashboard', {
                 url:'/',
+                controller: 'dashboardController',
                 templateUrl:'app/dashboard/dashboard.html'
             })
     }
