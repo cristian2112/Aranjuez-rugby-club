@@ -23,5 +23,10 @@
                 templateUrl: 'app/contactUs/contactUs.html',
                 controller: 'contactUsController'
             })
+            .state('gallery', {
+                url: '/Galeria',
+                templateUrl: 'app/gallery/gallery.html',
+                controller: 'galleryController'
+            })
     }
 })();
