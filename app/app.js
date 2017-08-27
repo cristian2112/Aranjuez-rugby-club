@@ -15,12 +15,13 @@
         // routes
         $stateProvider
             .state('dashboard', {
-                url:'/',
-                templateUrl:'app/dashboard/dashboard.html'
+                url: '/',
+                templateUrl: 'app/dashboard/dashboard.html'
             })
             .state('contactUs', {
-                url:'/Contactenos',
-                templateUrl:'app/contactUs/contactUs.html'
+                url: '/Contactenos',
+                templateUrl: 'app/contactUs/contactUs.html',
+                controller: 'contactUsController'
             })
     }
 })();
