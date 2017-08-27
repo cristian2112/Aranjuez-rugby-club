@@ -6,6 +6,17 @@
     contactUsController.$inject = ['$scope'];
 
     function contactUsController($scope) {
-
+        $scope.modelContactUs = [
+            {
+                name: 'Jose Manuel Mendoza',
+                telephone: '70971826',
+                email: 'josemanueljacku16@gmail.com'
+            },
+            {
+                name: 'Alberto Zunino Escribano',
+                telephone: '73697222',
+                email: 'aranjuezrugbyclub@gmail.com '
+            }
+        ]
     }
 })();
