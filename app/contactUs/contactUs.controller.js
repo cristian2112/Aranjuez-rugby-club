@@ -17,6 +17,6 @@
                 telephone: '73697222',
                 email: 'aranjuezrugbyclub@gmail.com '
             }
-        ]
+        ];
     }
 })();
