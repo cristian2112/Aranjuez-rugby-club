@@ -1,0 +1,61 @@
+<div class="row" id="contacUS">
+    <div class="col s12 m12 l12">
+        <h5 class="breadcrumbs-title">
+            Contactenos
+        </h5>
+        <ol class="breadcrumb">
+            <li><a ui-sref="dashboard">Inicio</a></li>
+            <li>Contactenos</li>
+        </ol>
+    </div>
+    <div class="invoice">
+        <div class="invoice-header">
+            <div class="row section">
+                <div class="col s12 m6 l6">
+                    <div class="col s6">
+                        <img src="images/logo2.svg" >
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="invoice-company-addres right-align">
+                        <span class="invoice-icon">
+                            <i class="mdi-maps-pin-drop green-text"></i>
+                        </span>
+                        <p>
+                            <strong>Aranuez R.C</strong> <br>
+                            <span>Location</span> <br>
+                            <span>Santa Cruz, Bolivia</span> <br>
+                            <span>Correo</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row " style=" margin: auto">
+        <div class="col s12 m12 l7 offset-l1">
+            <h5>Ubicación</h5>
+            <div class="card" style="height: 40em">
+                <iframe style="border:0; width: 100%; height: 100%" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d237.44857197755303!2d-63.18204116123071!3d-17.783369509092775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sbo!4v1503858361062" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="col s12 m6 l3" ng-repeat="users in modelContactUs">
+            <h5 ng-if="$index == 0">Entrenadores</h5>
+            <div class="card">
+                <div style="height: 12em" class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="images/user-bg-2.jpg">
+                </div>
+                <div class="card-content">
+                    <a class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right">
+                        <i class="mdi-action-account-circle"></i>
+                    </a>
+                    <p class=" activator grey-text text-darken-4 truncate"> <i class="mdi-action-perm-identity green-text text-darken-2"></i>{{users.name}}</p>
+                    <p><i class="mdi-action-perm-phone-msg green-text text-darken-2"></i>{{users.telephone}}</p>
+                    <p class="truncate"><i class="mdi-communication-email green-text text-darken-2"></i>{{users.email}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
