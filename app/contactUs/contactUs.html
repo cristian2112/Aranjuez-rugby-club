@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="contacUS">
     <div class="col s12 m12 l12">
         <h5 class="breadcrumbs-title">
             Contactenos
@@ -13,7 +13,7 @@
             <div class="row section">
                 <div class="col s12 m6 l6">
                     <div class="col s6">
-                        <img style="max-width: 200px" src="images/logo2.svg" >
+                        <img src="images/logo2.svg" >
                     </div>
                 </div>
                 <div class="col s12 m6 l6">
@@ -39,6 +39,7 @@
                 <iframe style="border:0; width: 100%; height: 100%" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d237.44857197755303!2d-63.18204116123071!3d-17.783369509092775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sbo!4v1503858361062" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
+
         <div class="col s12 m6 l3" ng-repeat="users in modelContactUs">
             <h5 ng-if="$index == 0">Entrenadores</h5>
             <div class="card">
@@ -49,9 +50,9 @@
                     <a class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right">
                         <i class="mdi-action-account-circle"></i>
                     </a>
-                    <p class=" activator grey-text text-darken-4"> <i class="mdi-action-perm-identity green-text text-darken-2"></i>{{users.name}}</p>
+                    <p class=" activator grey-text text-darken-4 truncate"> <i class="mdi-action-perm-identity green-text text-darken-2"></i>{{users.name}}</p>
                     <p><i class="mdi-action-perm-phone-msg green-text text-darken-2"></i>{{users.telephone}}</p>
-                    <p><i class="mdi-communication-email green-text text-darken-2"></i>{{users.email}}</p>
+                    <p class="truncate"><i class="mdi-communication-email green-text text-darken-2"></i>{{users.email}}</p>
                 </div>
             </div>
         </div>
