@@ -27,6 +27,7 @@
                 url: '/Galeria',
                 templateUrl: 'app/gallery/gallery.html',
                 controller: 'galleryController'
+            })
             .state('informationOfClub', {
                 url: '/InformacionDelClub',
                 templateUrl: 'app/informationOfClub/informationOfClub.html',
