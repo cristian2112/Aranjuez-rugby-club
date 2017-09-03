@@ -1,0 +1,9 @@
+.materialboxed {
+    width: 100%;
+}
+
+.imagen-content {
+    max-height: 250px;
+    height: 100vh;
+    margin-bottom: 10px;
+}
