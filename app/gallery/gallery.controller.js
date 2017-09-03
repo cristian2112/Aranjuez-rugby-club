@@ -21,7 +21,6 @@
         ];
 
         $scope.activateMaterialboxed = function () {
-            console.log('a;dsfsd');
             $('.materialboxed').materialbox();
         };
     }
