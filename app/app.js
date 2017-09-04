@@ -10,12 +10,12 @@
     function config($stateProvider, $urlRouterProvider, $httpProvider) {
         $httpProvider.defaults.useXDomain = true;
 
-        $urlRouterProvider.otherwise('/');
+
 
         // routes
         $stateProvider
             .state('dashboard', {
-                url: '/',
+                url: '',
                 templateUrl: 'app/dashboard/dashboard.html'
             })
             .state('contactUs', {
