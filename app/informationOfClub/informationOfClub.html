@@ -4,7 +4,7 @@
             <div class="col s12 m12 l12">
                 <h5 class="breadcrumbs-title">Información del Club</h5>
                 <ol class="breadcrumb">
-                    <li ><a href="" ui-sref="dashboard">Inicio</a></li>
+                    <li><a href="" ui-sref="dashboard">Inicio</a></li>
                     <li class="active">Información del club</li>
                 </ol>
             </div>
@@ -15,25 +15,24 @@
     <div class="section">
         <div class="row">
             <div class="col s12">
-                <div class="card h">
-                    <div class="card-contend">
+                <div class="card hoverable">
+                    <div class="card-contend ">
                         <ul class="tabs tab-profile z-depth-1 light-blue">
                             <li class="tab col s3">
-                                <a href="#history" class="white-text waves-effect waves-light active"><i class=""></i>Historia</a>
+                                <a href="" ng-click="ChangeTab('history')" class="white-text waves-effect waves-light active"><i class=""></i>Historia</a>
                             </li>
-                            <li class="tab col s3">
-                                <a href="#vision" class="white-text waves-effect waves-light"><i class=""></i>Vision</a>
+                            <li class="tab col s4">
+                                <a href="" ng-click="ChangeTab('players')" class="white-text waves-effect waves-light"><i class=""></i>Jugadores</a>
                             </li>
-                            <li class="tab col s3">
-                                <a href="#mision" class="white-text waves-effect waves-light"><i class=""></i>Misión</a>
+                            <li class="tab col s4">
+                                <a href="" ng-click="ChangeTab('admin')" class="white-text waves-effect waves-light truncate"><i class=""></i>Administración</a>
                             </li>
-                            <div class="indicator" style="right: 10px; left: 0"></div>
                         </ul>
-                        <div id="history" class="tab-content col s12 lighten-4" >
+                        <div ng-if="tabs == 'history'" class="tab-content col s12 lighten-4">
                             <div class="row">
                                 <div class="col s12 m12 l12 ">
-                                    <div class="card light-blue">
-                                        <div class="card-content white-text">
+                                    <div class="card ">
+                                        <div class="card-content ">
                                             <p class="text-justify">
                                                 <strong>ARANJUEZ RUGBY CLUB  </strong>nació el 17 de
                                                 abril del año 2013, nació debido al entusiasmo de un grupo de amigos, ex jugadores
@@ -48,9 +47,11 @@
                                                 también incorporar más gente nueva al club.
                                                 Antes de jugar su primer partido, ARANJUEZ contaba con un grupo de aproximadamente 28 a 30
                                                 jóvenes de todas partes de la ciudad.
+                                                <a ng-if="!showingMoreHistoryOfClub" href="" ng-click="showMoreHistoryOfClub(true)">Leer mas.</a>
+                                                <a ng-if="showingMoreHistoryOfClub" href="" ng-click="showMoreHistoryOfClub(false)">Ocultar.</a>
                                             </p>
                                             <br>
-                                            <p class="text-justify">
+                                            <p id="moreHistory" class="text-justify animated fadeIn" ng-if="showingMoreHistoryOfClub">
                                                 Los primeros partidos, a pesar de la derrota, fueron todo un éxito, los jugadores, padres,
                                                 amigos, sintieron que el papel hecho en esos partidos, invitaba a soñar para que en algún
                                                 momento no muy lejano llegara el primer triunfo.
@@ -86,8 +87,8 @@
                                 </div>
                                 <div class="col s12 m6 l4">
                                     Vision
-                                    <div class="card light-blue">
-                                        <div class="card-content white-text">
+                                    <div class="card">
+                                        <div class="card-content">
                                             <p class="text-justify">
                                                 Llegar a ser un club reconoido en todo el pais, no solo por su buen desempeño sino por
                                                 brindar apoyo a todo su equipo forjando virtudes y valores en sus jugadores.
@@ -97,8 +98,8 @@
                                 </div>
                                 <div class="col s12 m6 l4">
                                     Mision
-                                    <div class="card light-blue">
-                                        <div class="card-content white-text">
+                                    <div class="card">
+                                        <div class="card-content">
                                             <p class="text-justify">
                                                 Hacer rugby un deporte donde puedan jugar todos, más allá de su porte físico o de su habilidad.
                                             </p>
@@ -107,16 +108,42 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="vision" class="tab-content col s12 lighten-4" >
+                        <div ng-if="tabs == 'players'" class="tab-content col s12 lighten-4" >
                             <div class="row">
-                                <div class="col s12">
-                                    <p>
-
-                                    </p>
+                                <div class="col s12 m12 l6" ng-repeat="teams in teamTypes">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <ul class="collection with-header" style="border: none;">
+                                                <li class="collection-header">
+                                                    <h4>{{teams.name}}</h4>
+                                                </li>
+                                                <li class="collection-item" ng-repeat="items in dataPlayers"
+                                                    ng-class="{'hiden': items.tipoDeEquipo != 'Division Masculina'}"
+                                                    ng-if="teams.name == 'Division Masculina'">
+                                                    <div>
+                                                        {{items.name}}
+                                                        <a href="" ng-click="showModalInfoPlayer(items)" class="secondary-content">
+                                                            <i class="mdi-content-add-circle"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="collection-item" ng-repeat="items in dataPlayers"
+                                                    ng-class="{'hiden': items.tipoDeEquipo == 'Division Masculina'}"
+                                                    ng-if="teams.name != 'Division Masculina'">
+                                                    <div>
+                                                        {{items.name}}
+                                                        <a href="" ng-click="showModalInfoPlayer(items)" class=" secondary-content">
+                                                            <i class="mdi-content-add-circle"></i>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="mision" class="tab-content col s12 lighten-4" >
+                        <div ng-if="tabs == 'admin'" class="tab-content col s12 lighten-4" >
                             <div class="row">
                                 <div class="col s12">
                                     <p>
@@ -127,9 +154,20 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
+    </div>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere libero nobis officia qui recusandae, similique
+        veritatis voluptates! Cupiditate deleniti fugiat iure neque quae. Autem fuga, molestias natus nisi provident
+        sapiente!
+    </div>
+    <div class="modal-footer">
+        <a href="" class="waves-effect waves-red btn-flat modal-action modal-close">
+            Cerrar
+        </a>
     </div>
 </div>
